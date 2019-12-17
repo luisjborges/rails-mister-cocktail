@@ -20,6 +20,7 @@ class DosesController < ApplicationController
     @cocktail = Dose.find(params[:id]).cocktail
     Dose.delete(params[:id])
     redirect_to cocktail_path(@cocktail)
+    # delete '/doses/:id', to: 'doses#destroy', as: 'dose'
   end
 
   private
